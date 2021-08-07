@@ -4,7 +4,7 @@ let dataPage = require("./dataInput.js");
 routerMain.get("/", (req, res, next) => {
   let dataNamas = dataPage.dataSimpan;
 
-  res.render("mainPage", { dataNamas });
+  res.render("mainPage", { titleDocs: `Home Page`, dataNamas, path: `/` });
 });
 
 module.exports = routerMain;

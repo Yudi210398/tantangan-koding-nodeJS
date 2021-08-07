@@ -3,7 +3,10 @@ const routerInput = express.Router();
 const routerMain = require("./mainPage");
 let dataSimpan = [];
 routerInput.get("/data-name", (req, res, next) => {
-  res.render("datainput");
+  res.render("datainput", {
+    titleDocs: `Input Page`,
+    path: "/admin/data-name",
+  });
 });
 
 routerInput.post("/data", (req, res, next) => {
